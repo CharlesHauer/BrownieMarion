@@ -1,0 +1,26 @@
+# ============================================================
+#  AVIS CLIENTS (affichés sur la page Accueil)
+# ============================================================
+#  - Chaque avis commence par « - texte: »
+#  - Utilisez de vrais avis, avec l'accord des clients
+#    (par exemple repris de votre fiche Google).
+#  - 3 avis s'affichent joliment ; vous pouvez en mettre plus.
+
+avis:
+  - texte: >-
+      [[Avis client à insérer — ex. : progrès constatés, relation avec Marion,
+      ambiance des séances.]]
+    prenom: "[[Prénom]]"
+    chien: "[[Nom du chien]], [[race]]"
+
+  - texte: >-
+      [[Avis client à insérer — idéalement un témoignage sur l'éducation d'un
+      chiot.]]
+    prenom: "[[Prénom]]"
+    chien: "[[Nom du chien]], [[race]]"
+
+  - texte: >-
+      [[Avis client à insérer — idéalement un témoignage sur un trouble du
+      comportement résolu.]]
+    prenom: "[[Prénom]]"
+    chien: "[[Nom du chien]], [[race]]"

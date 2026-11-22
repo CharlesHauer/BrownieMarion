@@ -1,0 +1,75 @@
+# ============================================================
+#  PAGE À PROPOS (et présentation sur la page Accueil)
+# ============================================================
+#  - [[ ... ]] = texte à compléter
+#  - Photos : nom du fichier déposé dans public/images
+
+# --- Présentation (aussi affichée sur l'Accueil) --------------
+titre: Bonjour, moi c'est Marion !
+presentation: >-
+  Éducatrice canine depuis [[X]] ans, j'accompagne les familles et leurs chiens
+  vers une relation basée sur la confiance et la compréhension mutuelle.
+  [[Une phrase sur ce qui vous a amenée à ce métier.]]
+photo_portrait:
+
+# Les 3 chiffres clés (aussi affichés sur l'Accueil)
+chiffres:
+  - chiffre: "[[X]]"
+    texte: années d'expérience
+  - chiffre: "[[XXX]]"
+    texte: chiens accompagnés
+  - chiffre: 100 %
+    texte: méthodes positives
+
+# --- Mon parcours ---------------------------------------------
+parcours:
+  surtitre: Mon histoire
+  titre: Mon parcours
+  # Un tiret = un paragraphe. Vous pouvez en ajouter ou en retirer.
+  paragraphes:
+    - "[[Votre parcours : comment est née votre passion pour les chiens, vos expériences marquantes.]]"
+    - "[[Votre formation : où et comment vous vous êtes formée, ce que vous en retenez.]]"
+    - "[[Brownie : présentez votre chien, son rôle dans votre parcours ou vos séances.]]"
+
+formations:
+  titre: Formations & certifications
+  liste:
+    - "[[Diplôme / certificat d'éducateur canin]]"
+    - "[[ACACED — Attestation de connaissances]]"
+    - "[[Formation complémentaire (comportement, chiots…)]]"
+
+# --- Ma méthode -----------------------------------------------
+methode:
+  surtitre: Ma méthode
+  titre: Ce qui guide mon travail
+
+# Les valeurs (aussi affichées sur l'Accueil)
+# Icônes possibles : voir la liste dans 00-LISEZ-MOI.md
+valeurs:
+  - icone: coeur
+    titre: Bienveillance
+    texte: >-
+      Des méthodes positives, sans contrainte ni punition, qui respectent le
+      bien-être du chien.
+  - icone: cerveau
+    titre: Compréhension
+    texte: >-
+      Comprendre les besoins et les émotions de votre chien pour agir sur les
+      causes, pas seulement les symptômes.
+  - icone: etincelles
+    titre: Complicité
+    texte: >-
+      Construire une vraie relation d'équipe entre vous et votre chien, pour un
+      quotidien plus serein.
+
+# --- Photos en bas de page ------------------------------------
+photos:
+  - photo:
+    description: Séance en extérieur
+  - photo:
+    description: Brownie, le chien de Marion
+  - photo:
+    description: Marion en formation / avec un groupe
+
+# --- Bandeau de fin de page -----------------------------------
+bandeau_titre: Envie qu'on fasse connaissance ?

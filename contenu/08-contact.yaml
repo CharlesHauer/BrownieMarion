@@ -1,0 +1,22 @@
+# ============================================================
+#  PAGE CONTACT
+# ============================================================
+#  L'email, le téléphone, la zone, les horaires et les réseaux
+#  se modifient dans 01-infos-generales.yaml
+
+surtitre: Contact
+titre: Parlons de votre chien
+intro: >-
+  Pour réserver votre séance découverte ou simplement poser une question,
+  écrivez-moi : je vous réponds rapidement.
+
+reseaux:
+  titre: Suivez-nous sur les réseaux
+  texte: Conseils, coulisses et progrès des loulous.
+
+formulaire:
+  titre: Envoyer un message
+  confirmation_titre: Message envoyé !
+  confirmation_texte: >-
+    Merci pour votre message, je vous réponds au plus vite (sous 48h en
+    général).

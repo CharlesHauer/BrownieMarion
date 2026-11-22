@@ -1,0 +1,105 @@
+/*
+ * ============================================================
+ *  CHARTE GRAPHIQUE — le seul fichier à modifier pour changer
+ *  les couleurs, les arrondis et les polices du site.
+ * ============================================================
+ *
+ *  - Chaque thème est un bloc [data-theme="…"].
+ *  - Le thème actif se choisit dans src/config/site.ts (clé `theme`).
+ *  - Pour créer un thème : dupliquer un bloc, le renommer, ajuster
+ *    les valeurs, puis l'ajouter à `themes` dans src/config/site.ts.
+ *  - Couleurs en OKLCH : oklch(luminosité% chroma teinte).
+ *    Garder la même teinte sur une échelle donne une palette homogène.
+ *  - Aperçu en direct : page /charte
+ */
+
+/* ---------- Chaleureux (par défaut) : brun Brownie, crème, sauge ---------- */
+:root,
+[data-theme="chaleureux"] {
+  --primary-50: oklch(97% 0.015 65);
+  --primary-100: oklch(93% 0.035 65);
+  --primary-200: oklch(86% 0.06 62);
+  --primary-300: oklch(76% 0.09 58);
+  --primary-400: oklch(66% 0.11 55);
+  --primary-500: oklch(56% 0.11 50);
+  --primary-600: oklch(48% 0.1 48);
+  --primary-700: oklch(40% 0.085 46);
+  --primary-800: oklch(33% 0.065 45);
+  --primary-900: oklch(27% 0.05 44);
+
+  --accent-50: oklch(97% 0.015 150);
+  --accent-100: oklch(94% 0.03 150);
+  --accent-200: oklch(88% 0.05 150);
+  --accent-500: oklch(62% 0.07 150);
+  --accent-600: oklch(53% 0.065 150);
+  --accent-700: oklch(45% 0.06 150);
+
+  --surface: oklch(98.5% 0.01 80);
+  --surface-alt: oklch(95.5% 0.025 70);
+  --ink: oklch(25% 0.02 50);
+  --ink-muted: oklch(45% 0.025 50);
+
+  --radius: 1.25rem;
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-nunito);
+}
+
+/* ---------- Forêt : vert forêt, sable, ocre ---------- */
+[data-theme="foret"] {
+  --primary-50: oklch(97% 0.015 155);
+  --primary-100: oklch(93% 0.035 155);
+  --primary-200: oklch(86% 0.055 155);
+  --primary-300: oklch(76% 0.08 155);
+  --primary-400: oklch(64% 0.09 156);
+  --primary-500: oklch(53% 0.085 158);
+  --primary-600: oklch(45% 0.075 160);
+  --primary-700: oklch(38% 0.065 160);
+  --primary-800: oklch(31% 0.05 162);
+  --primary-900: oklch(25% 0.04 162);
+
+  --accent-50: oklch(97% 0.02 80);
+  --accent-100: oklch(94% 0.05 80);
+  --accent-200: oklch(88% 0.08 78);
+  --accent-500: oklch(72% 0.13 70);
+  --accent-600: oklch(62% 0.13 62);
+  --accent-700: oklch(52% 0.12 58);
+
+  --surface: oklch(98.5% 0.012 90);
+  --surface-alt: oklch(95% 0.028 88);
+  --ink: oklch(24% 0.03 160);
+  --ink-muted: oklch(44% 0.03 160);
+
+  --radius: 1rem;
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-nunito);
+}
+
+/* ---------- Épuré : blanc, anthracite, terracotta ---------- */
+[data-theme="epure"] {
+  --primary-50: oklch(97.5% 0.003 260);
+  --primary-100: oklch(94% 0.005 260);
+  --primary-200: oklch(87% 0.007 260);
+  --primary-300: oklch(76% 0.01 260);
+  --primary-400: oklch(62% 0.012 260);
+  --primary-500: oklch(50% 0.014 260);
+  --primary-600: oklch(38% 0.014 260);
+  --primary-700: oklch(31% 0.012 260);
+  --primary-800: oklch(25% 0.01 260);
+  --primary-900: oklch(20% 0.008 260);
+
+  --accent-50: oklch(97% 0.015 40);
+  --accent-100: oklch(94% 0.035 40);
+  --accent-200: oklch(87% 0.07 40);
+  --accent-500: oklch(63% 0.14 40);
+  --accent-600: oklch(56% 0.14 38);
+  --accent-700: oklch(49% 0.13 36);
+
+  --surface: oklch(99.5% 0 0);
+  --surface-alt: oklch(96.5% 0.004 260);
+  --ink: oklch(20% 0.01 260);
+  --ink-muted: oklch(45% 0.012 260);
+
+  --radius: 0.5rem;
+  --font-heading: var(--font-outfit);
+  --font-body: var(--font-outfit);
+}

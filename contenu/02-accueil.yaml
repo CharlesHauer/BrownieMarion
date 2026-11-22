@@ -1,0 +1,61 @@
+# ============================================================
+#  PAGE ACCUEIL
+# ============================================================
+#  - Mettez un mot entre *étoiles* pour le mettre en valeur
+#    (couleur + soulignement), uniquement dans le grand titre.
+#  - Photos : déposez le fichier dans le dossier public/images
+#    puis écrivez son nom, ex : photo: marion-brownie.jpg
+#    Laissez vide pour afficher la zone « Photo à insérer ».
+#  - Le texte « Bonjour, moi c'est Marion » et les chiffres
+#    se modifient dans 03-a-propos.yaml (ils sont partagés).
+
+# --- Haut de page ---------------------------------------------
+haut_de_page:
+  surtitre: Éducatrice canine
+  titre: Une relation de *confiance* avec votre chien
+  texte: >-
+    Des méthodes positives et bienveillantes pour accompagner votre chien à
+    chaque étape de sa vie, à domicile ou en extérieur.
+  photo:
+  points_forts:
+    - icone: poignee-de-main
+      texte: Méthodes positives
+    - icone: maison
+      texte: À domicile
+    - icone: pousse
+      texte: Chiots & adultes
+  # Petite carte blanche posée sur la photo
+  badge:
+    chiffre: "[[XXX]] chiens"
+    texte: accompagnés avec succès
+
+# --- Présentation de Marion -----------------------------------
+presentation:
+  surtitre: Qui suis-je ?
+  photo_1:
+  photo_2:
+  bouton: Mon parcours
+
+# --- Sections suivantes ---------------------------------------
+# (les valeurs affichées se modifient dans 03-a-propos.yaml)
+methode:
+  surtitre: Ma méthode
+  titre: Éduquer avec le cœur et la tête
+  intro: >-
+    Une approche respectueuse, fondée sur les connaissances scientifiques du
+    comportement canin.
+
+# (la liste des prestations se modifie dans 04-prestations.yaml)
+prestations:
+  surtitre: Prestations
+  titre: Un accompagnement adapté à chaque chien
+
+# (les photos se modifient dans 07-galerie.yaml)
+galerie:
+  surtitre: Galerie
+  titre: Quelques moments partagés
+
+# (les avis se modifient dans 06-avis-clients.yaml)
+avis:
+  surtitre: Avis
+  titre: Ils m'ont fait confiance

@@ -1,0 +1,46 @@
+# ============================================================
+#  INFOS GÉNÉRALES — utilisées sur toutes les pages
+#  (en-tête, pied de page, menu mobile, bandeau de fin de page)
+# ============================================================
+#  Règles simples :
+#   - Ne modifiez que le texte APRÈS les deux-points ( : )
+#   - Ne supprimez pas les mots avant les deux-points
+#   - [[ ... ]] = texte à compléter (surligné en jaune sur le site)
+#   - Les lignes qui commencent par # sont des commentaires (ignorés)
+
+# --- Identité -------------------------------------------------
+nom: Marion
+metier: Éducatrice canine
+nom_du_site: Marion Éducation Canine
+slogan: Éducation canine bienveillante
+
+# Texte affiché par Google sous le nom du site (150 caractères environ)
+description_google: >-
+  Éducation canine bienveillante : chiots, cours individuels, marche en laisse,
+  comportement. Des méthodes positives pour une relation de confiance avec
+  votre chien.
+
+# --- Coordonnées ----------------------------------------------
+email: contact@example.com
+telephone: 06 00 00 00 00
+zone: "[[Ville]] et alentours ([[XX]] km)"
+horaires: "[[Du lundi au samedi, 9h – 19h]]"
+
+# --- Réseaux sociaux ------------------------------------------
+# Collez l'adresse complète de la page. Laissez vide pour masquer le réseau.
+reseaux:
+  instagram: https://instagram.com/
+  facebook: https://facebook.com/
+  tiktok: https://tiktok.com/
+
+# --- Bouton principal -----------------------------------------
+# Le même texte est utilisé sur tous les boutons d'action du site.
+bouton_principal: Réserver une séance découverte
+
+# --- Bandeau de fin de page -----------------------------------
+# Grand encadré foncé en bas des pages Accueil, Prestations, Galerie.
+bandeau:
+  titre: Et si on commençait par une séance découverte ?
+  texte: >-
+    1h30 pour faire connaissance, observer votre chien et définir ensemble un
+    plan adapté. Sans engagement.

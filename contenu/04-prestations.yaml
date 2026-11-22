@@ -1,0 +1,66 @@
+# ============================================================
+#  PAGE PRESTATIONS (et aperçu sur la page Accueil)
+# ============================================================
+#  - Chaque prestation commence par « - titre: »
+#  - Pour en ajouter une : copiez un bloc entier (de « - titre: »
+#    jusqu'à la ligne avant le suivant) et collez-le à la fin.
+#  - Icônes possibles : voir la liste dans 00-LISEZ-MOI.md
+
+surtitre: Prestations
+titre: Un accompagnement sur mesure
+intro: >-
+  À domicile ou en extérieur, chaque séance est adaptée à votre chien, à votre
+  rythme et à vos objectifs.
+
+liste:
+  - titre: Éducation du chiot
+    icone: chien
+    resume: >-
+      Poser de bonnes bases dès le plus jeune âge : propreté, socialisation,
+      rappel, morsures de jeu.
+    pour_qui: Chiots de 2 à [[6]] mois et leurs familles
+    etapes:
+      - Découverte de votre chiot et de votre quotidien
+      - Mise en place des routines (propreté, repos, jeux)
+      - Socialisation progressive et apprentissages de base
+    photo:
+    description_photo: Chiot en pleine séance, format paysage
+
+  - titre: Cours individuels
+    icone: maison
+    resume: >-
+      Des séances à domicile ou en extérieur, adaptées à votre chien et à votre
+      quotidien.
+    pour_qui: Tous les chiens, quel que soit leur âge
+    etapes:
+      - Bilan de départ et définition des objectifs
+      - Exercices concrets dans votre environnement
+      - Fiche récapitulative et suivi entre les séances
+    photo:
+    description_photo: Marion qui guide un maître et son chien
+
+  - titre: Marche en laisse
+    icone: pattes
+    resume: >-
+      Des balades sereines, sans tirage, grâce à un travail progressif et
+      positif.
+    pour_qui: Chiens qui tirent, réagissent ou s'agitent en balade
+    etapes:
+      - Choix du matériel adapté (harnais, longe…)
+      - Exercices de connexion et de gestion de l'environnement
+      - Mise en pratique en ville ou en nature
+    photo:
+    description_photo: Balade en laisse détendue, en extérieur
+
+  - titre: Troubles du comportement
+    icone: poignee-de-main
+    resume: >-
+      Peurs, réactivité, aboiements, destructions : comprendre l'origine pour
+      accompagner le changement.
+    pour_qui: Chiens anxieux, réactifs ou en difficulté
+    etapes:
+      - Analyse approfondie du comportement et du contexte
+      - Plan d'accompagnement personnalisé
+      - Suivi régulier et ajustements
+    photo:
+    description_photo: Moment calme et complice avec un chien
