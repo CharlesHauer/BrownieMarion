@@ -130,36 +130,72 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ---------- Approche (bandeau du flyer) ---------- */}
+      {/* ---------- Déroulement : un parcours avec une date de fin ---------- */}
       {accueil.approche && (
         <Container className="pb-4 sm:pb-8">
-          <Reveal className="rounded-[calc(var(--radius)*2)] bg-white px-6 py-10 shadow-sm ring-1 ring-primary-100 sm:px-10">
-            <p className="mx-auto max-w-3xl text-center font-display text-2xl text-primary-900 text-balance sm:text-3xl">
+          <Reveal className="rounded-[calc(var(--radius)*2)] bg-white px-6 py-10 shadow-sm ring-1 ring-primary-100 sm:px-10 sm:py-14">
+            <h2 className="mx-auto max-w-3xl text-center font-display text-2xl text-primary-900 text-balance sm:text-3xl">
               <Emphasis text={accueil.approche.titre} />
-            </p>
-            <ul className="mt-10 grid gap-6 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-primary-100">
-              {accueil.approche.points.map((pt) => {
-                const Icon = icons[pt.icone];
+            </h2>
+            {accueil.approche.texte && (
+              <p className="mx-auto mt-4 max-w-2xl text-center text-ink-muted">
+                <Fill text={accueil.approche.texte} />
+              </p>
+            )}
+
+            <ol className="relative mt-10 grid gap-8 lg:mt-14 lg:grid-cols-4 lg:gap-6">
+              {/* Fil du parcours : vertical sur mobile, horizontal sur desktop */}
+              <span
+                aria-hidden
+                className="absolute top-6 right-[12.5%] left-[12.5%] hidden h-0.5 bg-linear-to-r from-primary-200 to-accent-500 lg:block"
+              />
+              {accueil.approche.etapes.map((step, i, all) => {
+                const Icon = icons[step.icone];
+                const last = i === all.length - 1;
                 return (
                   <li
-                    key={pt.titre}
-                    className="flex items-center gap-4 sm:flex-col sm:px-6 sm:text-center"
+                    key={step.titre}
+                    className="relative flex gap-4 lg:flex-col lg:items-center lg:text-center"
                   >
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent-100 text-accent-600">
+                    {/* Segment du fil vers l'étape suivante (mobile) */}
+                    {!last && (
+                      <span
+                        aria-hidden
+                        className="absolute top-12 -bottom-8 left-[23px] w-0.5 bg-linear-to-b from-primary-200 to-accent-500/60 lg:hidden"
+                      />
+                    )}
+                    <span
+                      className={
+                        last
+                          ? "relative z-10 grid size-12 shrink-0 place-items-center rounded-full bg-accent-600 text-white shadow-lg ring-4 ring-white shadow-accent-600/30"
+                          : "relative z-10 grid size-12 shrink-0 place-items-center rounded-full bg-primary-100 text-primary-700 ring-4 ring-white"
+                      }
+                    >
                       <Icon className="size-6" aria-hidden />
                     </span>
-                    <span>
-                      <span className="block font-bold text-primary-900">
-                        <Fill text={pt.titre} />
+                    <span className="pt-1 lg:pt-0">
+                      <span
+                        className={`block text-xs font-bold tracking-widest uppercase ${last ? "text-accent-600" : "text-ink-muted"}`}
+                      >
+                        {last ? "Arrivée" : `Étape ${i + 1}`}
                       </span>
-                      <span className="text-sm text-ink-muted">
-                        <Fill text={pt.texte} />
+                      <span className="mt-1 block font-bold text-primary-900">
+                        <Fill text={step.titre} />
+                      </span>
+                      <span className="mt-1 block text-sm text-ink-muted">
+                        <Fill text={step.texte} />
                       </span>
                     </span>
                   </li>
                 );
               })}
-            </ul>
+            </ol>
+
+            {accueil.approche.conclusion && (
+              <p className="mx-auto mt-12 max-w-2xl text-center font-script text-2xl leading-snug font-bold text-accent-600 sm:text-3xl">
+                <Fill text={accueil.approche.conclusion} />
+              </p>
+            )}
           </Reveal>
         </Container>
       )}
@@ -177,8 +213,8 @@ export default function HomePage() {
             />
             <Photo
               src={accueil.presentation.photo_2}
-              alt={`${infos.nom} en séance`}
-              hint="Marion en pleine séance"
+              alt="Terrain d'entraînement des cours collectifs"
+              hint="Marion en séance, ou le terrain d'entraînement"
               ratio="3/4"
               sizes="(min-width: 1024px) 25vw, 50vw"
               className="mt-10"
@@ -192,11 +228,11 @@ export default function HomePage() {
             <p className="mt-5 text-lg text-ink-muted">
               <Fill text={apropos.presentation} />
             </p>
-            <dl className="mt-8 grid grid-cols-3 gap-4 border-y border-primary-200 py-6">
+            <dl className="mt-8 grid grid-cols-3 gap-2 border-y border-primary-200 py-6 sm:gap-4">
               {apropos.chiffres.map((s) => (
                 <div key={s.texte}>
                   <dt className="sr-only">{s.texte}</dt>
-                  <dd className="font-display text-3xl text-primary-700">
+                  <dd className="font-display text-xl leading-tight text-primary-700 sm:text-3xl">
                     <Fill text={s.chiffre} />
                   </dd>
                   <dd className="mt-1 text-xs text-ink-muted sm:text-sm">

@@ -73,7 +73,9 @@ const accueilSchema = z.object({
   approche: z
     .object({
       titre: text,
-      points: z.array(z.object({ icone: icon, titre: text, texte: text })),
+      texte: optionalText,
+      etapes: z.array(z.object({ icone: icon, titre: text, texte: text })),
+      conclusion: optionalText,
     })
     .nullish(),
   presentation: z.object({

@@ -76,7 +76,7 @@ export default function TarifsPage() {
           ))}
         </Reveal>
         <p className="mt-2 text-center text-sm text-ink-muted md:hidden">
-          ← Faites défiler pour voir toutes les formules →
+          Faites glisser pour voir les formules&nbsp;→
         </p>
 
         {page.cours_collectifs && (
@@ -137,7 +137,9 @@ export default function TarifsPage() {
             <Reveal key={item.question} delay={i * 60}>
               <details className="faq group rounded-card bg-white ring-1 ring-primary-100 transition-shadow open:shadow-md">
                 <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-6 py-4 font-semibold text-primary-900 [&::-webkit-details-marker]:hidden">
-                  {item.question}
+                  <span>
+                    <Fill text={item.question} />
+                  </span>
                   <ChevronDown
                     className="size-5 shrink-0 text-accent-600 transition-transform duration-300 group-open:rotate-180"
                     aria-hidden

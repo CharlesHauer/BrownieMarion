@@ -42,9 +42,9 @@
 @theme {
   --text-display: clamp(2.5rem, 1.7rem + 4vw, 4.75rem);
   --text-display--line-height: 1.05;
-  --text-h1: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
+  --text-h1: clamp(2rem, 1.6rem + 2.5vw, 3.75rem);
   --text-h1--line-height: 1.1;
-  --text-h2: clamp(1.875rem, 1.5rem + 1.6vw, 2.75rem);
+  --text-h2: clamp(1.625rem, 1.35rem + 1.6vw, 2.75rem);
   --text-h2--line-height: 1.15;
 
   --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -68,6 +68,22 @@
   h2,
   h3 {
     @apply font-display text-primary-900 text-balance;
+  }
+
+  /* Un mot trop long passe à la ligne au lieu de faire déborder la page */
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  dd,
+  a {
+    overflow-wrap: break-word;
+  }
+
+  /* Une cellule de grille ne s'élargit jamais au-delà de l'écran */
+  :where(.grid) > * {
+    min-width: 0;
   }
 
   ::selection {

@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 import { type ContactField, type ContactState, sendContact } from "./actions";
 
 const inputClasses =
-  "w-full rounded-xl bg-surface px-4 py-3 text-base ring-1 ring-primary-200 transition-shadow outline-none placeholder:text-ink/40 focus:ring-2 focus:ring-primary-500 aria-invalid:ring-red-400";
+  "block w-full min-w-0 rounded-xl bg-surface px-4 py-3 text-base ring-1 ring-primary-200 transition-shadow outline-none placeholder:text-ink/40 focus:ring-2 focus:ring-primary-500 aria-invalid:ring-red-400";
 
 type ContactFormProps = {
   /** Titres des prestations (contenu/04-prestations.yaml) */
@@ -43,7 +43,11 @@ export function ContactForm({ services, confirmation }: ContactFormProps) {
   });
 
   return (
-    <form action={action} noValidate className="grid gap-5 sm:grid-cols-2">
+    <form
+      action={action}
+      noValidate
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
+    >
       <Field label="Nom et prénom" name="name" error={state.errors?.name}>
         <input
           {...field("name")}
@@ -109,7 +113,11 @@ export function ContactForm({ services, confirmation }: ContactFormProps) {
       </Field>
 
       <div className="sm:col-span-2">
-        <Button type="submit" disabled={pending} className="w-full sm:w-auto">
+        <Button
+          type="submit"
+          disabled={pending}
+          className="min-h-14 w-full text-base sm:min-h-12 sm:w-auto"
+        >
           {pending ? (
             <LoaderCircle className="size-4 animate-spin" aria-hidden />
           ) : (

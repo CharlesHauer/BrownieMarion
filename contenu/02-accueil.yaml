@@ -32,25 +32,38 @@ haut_de_page:
     chiffre: De 5 à 20 séances
     texte: selon le forfait choisi
 
-# --- Mon approche (bandeau sous le haut de page) --------------
+# --- Le déroulement (parcours en étapes jusqu'à la date de fin) ---
+# Chaque étape commence par « - icone: ». La dernière s'affiche
+# comme la ligne d'arrivée (drapeau).
 approche:
   titre: Vous donner les clés pour une *autonomie durable* avec votre chien.
-  points:
+  texte: >-
+    Chaque accompagnement a un début... et une fin. Une date de fin fixée dès le
+    départ, c'est un cap clair, des objectifs concrets et des progrès que vous
+    constatez séance après séance.
+  etapes:
+    - icone: loupe
+      titre: Bilan comportemental
+      texte: On fait le point ensemble et on choisit le forfait adapté.
+    - icone: diplome
+      titre: Séance théorique
+      texte: Comprendre votre chien, ses besoins et son langage.
     - icone: calendrier
-      titre: 1 séance
-      texte: par semaine
-    - icone: patte
-      titre: De 5 à 20 séances
-      texte: selon le forfait choisi
+      titre: Séances pratiques
+      texte: De 5 à 20 séances d'1 heure, à raison d'une par semaine.
     - icone: drapeau
-      titre: Une date de fin
-      texte: fixée dès le départ
+      titre: Date de fin
+      texte: Fixée dès le départ. Vous repartez autonome, avec les clés pour continuer.
+  conclusion: >-
+    Mon objectif : qu'à la fin de l'accompagnement, vous n'ayez plus besoin de
+    moi.
 
 # --- Présentation de Marion -----------------------------------
 presentation:
   surtitre: Qui suis-je ?
-  photo_1:
-  photo_2:
+  photo_1: marion-et-son-chien.jpg
+  # photo_2 : uniquement une photo de Marion ou sans personne (pas de client)
+  photo_2: terrain-agility-2.jpg
   bouton: Mon parcours
 
 # --- Sections suivantes ---------------------------------------

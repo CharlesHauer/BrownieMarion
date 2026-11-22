@@ -45,17 +45,19 @@ export default function AProposPage() {
             <p className="mt-6 text-lg text-ink-muted">
               <Fill text={p.presentation} />
             </p>
-            <dl className="mt-8 grid grid-cols-3 gap-4">
+            <dl className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
               {p.chiffres.map((s) => (
                 <div
                   key={s.texte}
-                  className="rounded-card bg-surface-alt p-4 text-center"
+                  className="rounded-card bg-surface-alt px-2 py-3 text-center sm:p-4"
                 >
                   <dt className="sr-only">{s.texte}</dt>
-                  <dd className="font-display text-2xl text-primary-700 sm:text-3xl">
+                  <dd className="font-display text-xl leading-tight text-primary-700 sm:text-3xl">
                     <Fill text={s.chiffre} />
                   </dd>
-                  <dd className="mt-1 text-xs text-ink-muted">{s.texte}</dd>
+                  <dd className="mt-1 text-[11px] leading-tight text-ink-muted sm:text-xs">
+                    {s.texte}
+                  </dd>
                 </div>
               ))}
             </dl>

@@ -14,33 +14,31 @@ intro: >-
   chiens que j'accompagne.
 
 photos:
+  - photo: cours-collectif-1.jpg
+    description: Cours collectif au coucher du soleil
+    format: paysage
+  - photo: marion-et-son-chien.jpg
+    description: Marion et son chien
+    format: paysage
+  - photo: terrain-agility-2.jpg
+    description: Le parcours d'agility
+    format: paysage
+  - photo: cours-collectif-2.jpg
+    description: Travail en groupe autour du tunnel
+    format: paysage
+  - photo: terrain-agility-3.jpg
+    description: Le terrain d'entraînement
+    format: paysage
+  - photo: terrain-agility-1.jpg
+    description: Slalom, tunnel et cerceaux
+    format: paysage
+  # Zones à remplir avec de prochaines photos :
   - photo:
-    description: Séance en extérieur
+    description: Séance d'éducation à domicile
     format: portrait
   - photo:
     description: Chiot en apprentissage
     format: carre
-  - photo:
-    description: Balade en groupe
-    format: paysage
-  - photo:
-    description: Complicité entre un chien et son maître
-    format: portrait
-  - photo:
-    description: Marion et Brownie
-    format: portrait
-  - photo:
-    description: Exercice de rappel
-    format: paysage
-  - photo:
-    description: Moment de calme
-    format: carre
-  - photo:
-    description: Séance à domicile
-    format: portrait
-  - photo:
-    description: Marche en laisse en ville
-    format: paysage
 
 # Encadré « Instagram » en bas de la page (masqué si pas d'Instagram
 # dans 01-infos-generales.yaml)

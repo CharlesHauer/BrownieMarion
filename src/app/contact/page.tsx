@@ -45,7 +45,7 @@ export default function ContactPage() {
       title={page.titre}
       intro={page.intro && <Fill text={page.intro} />}
     >
-      <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
         <div className="space-y-4">
           {channels.map(({ icon: Icon, label, value, href }, i) => {
             const content = (
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 </span>
                 <span className="min-w-0">
                   <span className="block text-sm text-ink-muted">{label}</span>
-                  <span className="block truncate font-semibold text-primary-900">
+                  <span className="block font-semibold text-primary-900 [overflow-wrap:anywhere]">
                     <Fill text={value} />
                   </span>
                 </span>
@@ -66,12 +66,12 @@ export default function ContactPage() {
                 {href ? (
                   <a
                     href={href}
-                    className="lift group flex items-center gap-4 rounded-card bg-white p-5 ring-1 ring-primary-100"
+                    className="lift group flex items-center gap-4 rounded-card bg-white p-4 ring-1 ring-primary-100 sm:p-5"
                   >
                     {content}
                   </a>
                 ) : (
-                  <div className="flex items-center gap-4 rounded-card bg-white p-5 ring-1 ring-primary-100">
+                  <div className="flex items-center gap-4 rounded-card bg-white p-4 ring-1 ring-primary-100 sm:p-5">
                     {content}
                   </div>
                 )}
@@ -80,7 +80,10 @@ export default function ContactPage() {
           })}
 
           {socials.length > 0 && (
-            <Reveal delay={260} className="rounded-card bg-primary-800 p-6">
+            <Reveal
+              delay={260}
+              className="rounded-card bg-primary-800 p-5 sm:p-6"
+            >
               <p className="font-display text-xl text-white">
                 {page.reseaux.titre}
               </p>
@@ -111,9 +114,9 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={120}>
-          <Card interactive={false} className="sm:p-10">
+          <Card interactive={false} className="p-5 sm:p-10">
             <h2 className="text-2xl">{page.formulaire.titre}</h2>
-            <p className="mt-2 mb-8 text-sm text-ink-muted">
+            <p className="mt-2 mb-6 text-sm text-ink-muted sm:mb-8">
               Les champs sans mention sont obligatoires.
             </p>
             <ContactForm

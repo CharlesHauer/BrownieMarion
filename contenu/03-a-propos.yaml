@@ -11,7 +11,7 @@ presentation: >-
   sa périphérie. Mon objectif : vous donner les clés pour une autonomie durable
   avec votre chien, dans le respect de son rythme. [[Une phrase sur ce qui vous
   a amenée à ce métier.]]
-photo_portrait:
+photo_portrait: marion-et-son-chien.jpg
 
 # Les 3 chiffres clés (aussi affichés sur l'Accueil)
 chiffres:
@@ -62,12 +62,12 @@ valeurs:
 
 # --- Photos en bas de page ------------------------------------
 photos:
-  - photo:
-    description: Séance à domicile
-  - photo:
-    description: Marion et son chien
-  - photo:
-    description: Cours collectif
+  - photo: cours-collectif-2.jpg
+    description: Cours collectif au coucher du soleil
+  - photo: terrain-agility-2.jpg
+    description: Le parcours d'agility des cours collectifs
+  - photo: terrain-agility-3.jpg
+    description: Le terrain d'entraînement, prêt à accueillir les chiens
 
 # --- Bandeau de fin de page -----------------------------------
 bandeau_titre: Envie qu'on fasse connaissance ?

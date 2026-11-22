@@ -16,7 +16,8 @@ export type ButtonVariant = keyof typeof variants;
 
 export function buttonClasses(variant: ButtonVariant = "primary") {
   return cn(
-    "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 font-semibold whitespace-nowrap transition-[background-color,box-shadow,scale] duration-200 active:scale-[0.98]",
+    "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-2.5 text-center font-semibold text-balance transition-[background-color,box-shadow,scale] duration-200 active:scale-[0.98]",
+    "sm:whitespace-nowrap",
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500",
     "disabled:pointer-events-none disabled:opacity-60",
     variants[variant],

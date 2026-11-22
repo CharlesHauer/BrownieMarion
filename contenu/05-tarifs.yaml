@@ -12,7 +12,7 @@ titre: Des formules claires et adaptées
 intro: >-
   Un accompagnement adapté aux besoins de chaque chien. Les séances
   individuelles durent 1 heure et sont organisées à raison d'une séance par
-  semaine.
+  semaine, avec une date de fin fixée dès le départ.
 
 # --- Bilan comportemental (encart avant les forfaits) ---------
 bilan:
@@ -28,8 +28,8 @@ formules:
     prix: 300 €
     description: 1 séance théorique + 5 séances pratiques
     inclus:
-      - Séances d'1 heure, 1 par semaine
-      - À domicile
+      - Séances d'1 heure, 1 par semaine, à domicile
+      - Date de fin fixée dès le départ
       - Paiement en 1 fois ou 2 fois sans frais
     mise_en_avant: non
 
@@ -37,8 +37,8 @@ formules:
     prix: 550 €
     description: 1 séance théorique + 10 séances pratiques
     inclus:
-      - Séances d'1 heure, 1 par semaine
-      - À domicile
+      - Séances d'1 heure, 1 par semaine, à domicile
+      - Date de fin fixée dès le départ
       - Paiement en 1 fois ou 2 fois sans frais
     mise_en_avant: oui
     etiquette: "[[Le plus choisi]]"
@@ -47,8 +47,8 @@ formules:
     prix: 800 €
     description: 1 séance théorique + 15 séances pratiques
     inclus:
-      - Séances d'1 heure, 1 par semaine
-      - À domicile
+      - Séances d'1 heure, 1 par semaine, à domicile
+      - Date de fin fixée dès le départ
       - Paiement en 1 fois ou jusqu'à 4 fois sans frais
     mise_en_avant: non
 
@@ -56,8 +56,8 @@ formules:
     prix: 1 050 €
     description: 1 séance théorique + 20 séances pratiques
     inclus:
-      - Séances d'1 heure, 1 par semaine
-      - À domicile
+      - Séances d'1 heure, 1 par semaine, à domicile
+      - Date de fin fixée dès le départ
       - Paiement en 1 fois ou jusqu'à 4 fois sans frais
     mise_en_avant: non
 
@@ -108,6 +108,11 @@ faq:
         Chaque forfait comprend 1 séance théorique et de 5 à 20 séances
         pratiques d'1 heure, à raison d'une séance par semaine. Le bilan
         comportemental permet de choisir le forfait adapté.
+    - question: Pourquoi une date de fin fixée dès le départ ?
+      reponse: >-
+        Parce que l'objectif est votre autonomie. Une date de fin donne un cap
+        clair et des objectifs concrets : à la fin de l'accompagnement, vous
+        avez les clés pour continuer seul·e avec votre chien.
     - question: Comment se passe le paiement ?
       reponse: >-
         Par chèque ou virement bancaire, en 1 fois ou 2 fois sans frais pour les

@@ -49,7 +49,7 @@ liste:
     etapes:
       - Analyse du comportement et de son contexte
       - Plan d'accompagnement personnalisé
-      - Suivi régulier jusqu'à votre autonomie
+      - Suivi régulier jusqu'à la date de fin, fixée dès le départ
     photo:
     description_photo: Moment calme et complice avec un chien
 
@@ -64,5 +64,5 @@ liste:
       - "[[Lieu et jour des cours]]"
       - Cours d'1 heure, 25 € le cours
       - 10 cours payés = le 11e offert
-    photo:
+    photo: cours-collectif-1.jpg
     description_photo: Cours collectif en extérieur

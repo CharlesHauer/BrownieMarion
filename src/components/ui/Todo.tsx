@@ -16,8 +16,15 @@ export function Todo({ children }: { children: ReactNode }) {
  * Affiche une chaîne en transformant chaque [[…]] en <Todo>.
  * Ex : "Éducatrice depuis [[X]] ans" → Éducatrice depuis [X] ans (surligné)
  */
+/** Espace fine insécable avant ? ! : ; » et après « (typographie française) */
+const NNBSP = " "; // espace fine insécable
+
+export function frenchSpacing(text: string) {
+  return text.replace(/ ([?!:;»])/g, `${NNBSP}$1`).replace(/« /g, `«${NNBSP}`);
+}
+
 export function Fill({ text }: { text: string }) {
-  const parts = text.split(/\[\[(.+?)\]\]/g);
+  const parts = frenchSpacing(text).split(/\[\[(.+?)\]\]/g);
   return (
     <>
       {parts.map((part, i) =>
