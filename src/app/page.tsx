@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -6,6 +7,7 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
+import { Emphasis } from "@/components/ui/Emphasis";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow, Section } from "@/components/ui/Section";
@@ -22,36 +24,6 @@ import {
 import { icons } from "@/lib/icons";
 
 const delay = (ms: number) => ({ "--delay": `${ms}ms` }) as CSSProperties;
-
-/** Titre du hero : les mots entre *étoiles* sont mis en valeur. */
-function HeroTitle({ text }: { text: string }) {
-  return text.split(/\*(.+?)\*/g).map((part, i) =>
-    i % 2 === 1 ? (
-      <span
-        key={`mot-${part}`}
-        className="relative whitespace-nowrap text-primary-600 italic"
-      >
-        {part}
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 200 12"
-          preserveAspectRatio="none"
-          className="absolute -bottom-1 left-0 h-3 w-full text-accent-500"
-        >
-          <path
-            d="M2 9C50 3 150 2 198 7"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-        </svg>
-      </span>
-    ) : (
-      part
-    ),
-  );
-}
 
 export default function HomePage() {
   const infos = getInfos();
@@ -83,7 +55,7 @@ export default function HomePage() {
               </div>
             )}
             <h1 className="animate-fade-up mt-5 text-display" style={delay(80)}>
-              <HeroTitle text={hero.titre} />
+              <Emphasis text={hero.titre} />
             </h1>
             <p
               className="animate-fade-up mt-6 max-w-xl text-lg text-ink-muted sm:text-xl"
@@ -119,14 +91,26 @@ export default function HomePage() {
           </div>
 
           <div className="animate-fade-up relative" style={delay(200)}>
-            <Photo
-              src={hero.photo}
-              alt={`${infos.nom}, ${infos.metier}`}
-              hint="Photo principale : Marion avec Brownie, en extérieur, format portrait"
-              ratio="4/5"
-              priority
-              className="rounded-[calc(var(--radius)*2)] shadow-2xl shadow-primary-900/15"
-            />
+            {hero.image ? (
+              <div className="relative mx-auto aspect-[594/481] w-full max-w-xl">
+                <Image
+                  src={hero.image}
+                  alt={`${infos.nom_du_site} – ${infos.nom}`}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 45vw, 90vw"
+                  className="object-contain"
+                />
+              </div>
+            ) : (
+              <Photo
+                alt={`${infos.nom}, ${infos.metier}`}
+                hint="Image principale : logo ou photo de Marion avec son chien"
+                ratio="4/5"
+                priority
+                className="rounded-[calc(var(--radius)*2)] shadow-2xl shadow-primary-900/15"
+              />
+            )}
             {hero.badge && (
               <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-card bg-white p-4 shadow-xl ring-1 ring-primary-100 sm:-left-6">
                 <span className="grid size-11 place-items-center rounded-full bg-amber-100 text-amber-600">
@@ -145,6 +129,40 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* ---------- Approche (bandeau du flyer) ---------- */}
+      {accueil.approche && (
+        <Container className="pb-4 sm:pb-8">
+          <Reveal className="rounded-[calc(var(--radius)*2)] bg-white px-6 py-10 shadow-sm ring-1 ring-primary-100 sm:px-10">
+            <p className="mx-auto max-w-3xl text-center font-display text-2xl text-primary-900 text-balance sm:text-3xl">
+              <Emphasis text={accueil.approche.titre} />
+            </p>
+            <ul className="mt-10 grid gap-6 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-primary-100">
+              {accueil.approche.points.map((pt) => {
+                const Icon = icons[pt.icone];
+                return (
+                  <li
+                    key={pt.titre}
+                    className="flex items-center gap-4 sm:flex-col sm:px-6 sm:text-center"
+                  >
+                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent-100 text-accent-600">
+                      <Icon className="size-6" aria-hidden />
+                    </span>
+                    <span>
+                      <span className="block font-bold text-primary-900">
+                        <Fill text={pt.titre} />
+                      </span>
+                      <span className="text-sm text-ink-muted">
+                        <Fill text={pt.texte} />
+                      </span>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </Reveal>
+        </Container>
+      )}
 
       {/* ---------- Présentation ---------- */}
       <Section tone="alt">
@@ -206,7 +224,7 @@ export default function HomePage() {
         intro={accueil.methode.intro}
         centered
       >
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {apropos.valeurs.map((v, i) => {
             const Icon = icons[v.icone];
             return (

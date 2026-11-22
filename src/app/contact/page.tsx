@@ -21,16 +21,16 @@ export default function ContactPage() {
 
   const channels = [
     {
-      icon: Mail,
-      label: "Email",
-      value: infos.email,
-      href: `mailto:${infos.email}`,
-    },
-    {
       icon: Phone,
       label: "Téléphone",
       value: infos.telephone,
       href: telHref(infos.telephone),
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: infos.email,
+      href: `mailto:${infos.email}`,
     },
     { icon: MapPin, label: "Zone d'intervention", value: infos.zone },
     ...(infos.horaires

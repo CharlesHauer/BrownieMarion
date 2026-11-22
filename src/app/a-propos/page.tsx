@@ -100,7 +100,7 @@ export default function AProposPage() {
       </Section>
 
       <Section eyebrow={p.methode.surtitre} title={p.methode.titre} centered>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {p.valeurs.map((v, i) => {
             const Icon = icons[v.icone];
             return (

@@ -27,10 +27,12 @@ export function PricingCard({
     >
       {hl && (
         <Badge tone="solid" className="absolute -top-3 left-7">
-          Le plus choisi
+          <Fill text={offer.etiquette ?? "Le plus choisi"} />
         </Badge>
       )}
-      <h3 className={cn("text-xl", hl && "text-white")}>{offer.nom}</h3>
+      <h3 className={cn("text-xl", hl && "text-white")}>
+        <Fill text={offer.nom} />
+      </h3>
       {offer.description && (
         <p className={cn("mt-2 text-sm", muted)}>
           <Fill text={offer.description} />

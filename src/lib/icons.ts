@@ -1,14 +1,19 @@
 import {
   Brain,
+  CalendarCheck,
   CreditCard,
   Dog,
+  Flag,
   Footprints,
+  GraduationCap,
   Heart,
   HeartHandshake,
   House,
   type LucideIcon,
   MapPin,
+  PawPrint,
   RotateCcw,
+  Search,
   Sparkles,
   Sprout,
   Star,
@@ -38,6 +43,11 @@ export const icons = {
   lieu: MapPin,
   "carte-bancaire": CreditCard,
   annulation: RotateCcw,
+  calendrier: CalendarCheck,
+  patte: PawPrint,
+  drapeau: Flag,
+  diplome: GraduationCap,
+  loupe: Search,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof icons;

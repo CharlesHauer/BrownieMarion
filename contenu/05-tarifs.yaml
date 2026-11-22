@@ -1,105 +1,127 @@
 # ============================================================
 #  PAGE TARIFS
 # ============================================================
-#  - Chaque formule commence par « - nom: »
-#  - mise_en_avant: oui  → carte foncée avec « Le plus choisi »
-#    (une seule formule de préférence)
+#  - Chaque forfait commence par « - nom: »
+#  - mise_en_avant: oui  → carte foncée avec une étiquette
+#    (texte de l'étiquette : champ « etiquette »)
 #  - [[ ... ]] = texte à compléter
+#  - Tarifs issus de la grille tarifaire (prix en euros TTC)
 
 surtitre: Tarifs
 titre: Des formules claires et adaptées
 intro: >-
-  Chaque accompagnement commence par une séance découverte pour faire le point
-  ensemble.
+  Un accompagnement adapté aux besoins de chaque chien. Les séances
+  individuelles durent 1 heure et sont organisées à raison d'une séance par
+  semaine.
+
+# --- Bilan comportemental (encart avant les forfaits) ---------
+bilan:
+  titre: Bilan comportemental préalable
+  prix: 40 €
+  texte: Prestation indépendante, réalisée avant l'engagement dans un forfait.
+
+# --- Accompagnement individuel --------------------------------
+forfaits_titre: Accompagnement individuel
 
 formules:
-  - nom: Séance découverte
-    prix: "[[XX]] €"
-    detail_prix: 1h30
-    description: Le point de départ pour faire connaissance et poser un bilan.
+  - nom: 5 séances pratiques
+    prix: 300 €
+    description: 1 séance théorique + 5 séances pratiques
     inclus:
-      - Bilan complet du chien
-      - Échange sur vos objectifs
-      - Premiers conseils concrets
-      - Plan d'accompagnement proposé
+      - Séances d'1 heure, 1 par semaine
+      - À domicile
+      - Paiement en 1 fois ou 2 fois sans frais
     mise_en_avant: non
 
-  - nom: Séance individuelle
-    prix: "[[XX]] €"
-    detail_prix: la séance d'1h
-    description: Une séance ciblée, à domicile ou en extérieur.
+  - nom: 10 séances pratiques
+    prix: 550 €
+    description: 1 séance théorique + 10 séances pratiques
     inclus:
-      - Travail sur un objectif précis
-      - Exercices adaptés à votre quotidien
-      - Compte-rendu écrit
-    mise_en_avant: non
-
-  - nom: Forfait 5 séances
-    prix: "[[XXX]] €"
-    detail_prix: au lieu de [[XXX]] €
-    description: Le meilleur rapport pour progresser durablement.
-    inclus:
-      - 5 séances d'1h
-      - Suivi par message entre les séances
-      - Compte-rendu après chaque séance
-      - Valable [[X]] mois
+      - Séances d'1 heure, 1 par semaine
+      - À domicile
+      - Paiement en 1 fois ou 2 fois sans frais
     mise_en_avant: oui
+    etiquette: "[[Le plus choisi]]"
 
-  - nom: Pack chiot
-    prix: "[[XXX]] €"
-    detail_prix: 4 séances
-    description: Tout pour bien démarrer avec votre nouveau compagnon.
+  - nom: 15 séances pratiques
+    prix: 800 €
+    description: 1 séance théorique + 15 séances pratiques
     inclus:
-      - Propreté et routines
-      - Socialisation
-      - Rappel et marche en laisse
-      - Livret d'accueil du chiot
+      - Séances d'1 heure, 1 par semaine
+      - À domicile
+      - Paiement en 1 fois ou jusqu'à 4 fois sans frais
     mise_en_avant: non
+
+  - nom: 20 séances pratiques
+    prix: 1 050 €
+    description: 1 séance théorique + 20 séances pratiques
+    inclus:
+      - Séances d'1 heure, 1 par semaine
+      - À domicile
+      - Paiement en 1 fois ou jusqu'à 4 fois sans frais
+    mise_en_avant: non
+
+# --- Cours collectifs (bandeau orange sous les forfaits) ------
+# Supprimez ce bloc pour le masquer.
+cours_collectifs:
+  titre: Cours collectif (1 heure)
+  prix: 25 €
+  texte: 10 cours payés = le 11e offert !
 
 # --- Infos pratiques ------------------------------------------
 infos_pratiques:
   surtitre: Infos pratiques
   titre: Bon à savoir
   liste:
+    - icone: calendrier
+      titre: Rythme
+      texte: >-
+        Séances individuelles d'1 heure, à raison d'une séance par semaine,
+        avec une date de fin fixée dès le départ.
     - icone: lieu
       titre: Déplacements
       texte: >-
-        Inclus dans un rayon de [[XX]] km autour de [[Ville]]. Au-delà : [[X]]
-        €/km.
+        À domicile sur Nantes et sa périphérie, dans un rayon de 30 km autour du
+        Leclerc Paridis.
     - icone: carte-bancaire
       titre: Paiement
       texte: >-
-        Espèces, virement ou [[autre moyen]]. Paiement en [[X]] fois possible
-        pour les forfaits.
-    - icone: annulation
-      titre: Annulation
-      texte: Gratuite jusqu'à [[48h]] avant la séance. Au-delà, la séance est due.
+        Par chèque ou virement bancaire. En 1 fois, 2 fois ou jusqu'à 4 fois
+        sans frais selon le forfait. Prix en euros TTC.
 
 # --- Questions fréquentes -------------------------------------
 faq:
   surtitre: FAQ
   titre: Questions fréquentes
   questions:
-    - question: À partir de quel âge peut-on commencer l'éducation ?
+    - question: Comment réserver ?
       reponse: >-
-        Dès l'arrivée du chiot à la maison, généralement vers 2 mois. Il n'est
-        jamais trop tard : un chien adulte ou senior peut aussi apprendre.
-    - question: Où se déroulent les séances ?
+        Appelez-moi au 07 59 75 10 59, ou utilisez le formulaire de contact pour
+        réserver votre bilan comportemental.
+    - question: Pourquoi commencer par un bilan comportemental ?
       reponse: >-
-        À votre domicile, ou à l'extérieur selon l'objectif (parc, ville,
-        forêt). Le lieu est choisi ensemble pour être au plus près de votre
-        quotidien.
-    - question: Quelles méthodes utilisez-vous ?
-      reponse: >-
-        Uniquement des méthodes positives et respectueuses, sans coercition ni
-        matériel punitif (collier étrangleur, électrique…).
+        Le bilan (40 €) est une prestation indépendante, réalisée avant tout
+        engagement. Il permet de comprendre votre chien et de choisir ensemble
+        le forfait le plus adapté.
     - question: Combien de séances faut-il prévoir ?
       reponse: >-
-        Cela dépend de votre chien et de vos objectifs. Le bilan de la séance
-        découverte permet d'estimer le nombre de séances. En moyenne : [[X à Y]]
-        séances.
+        Chaque forfait comprend 1 séance théorique et de 5 à 20 séances
+        pratiques d'1 heure, à raison d'une séance par semaine. Le bilan
+        comportemental permet de choisir le forfait adapté.
+    - question: Comment se passe le paiement ?
+      reponse: >-
+        Par chèque ou virement bancaire, en 1 fois ou 2 fois sans frais pour les
+        forfaits de 5 et 10 séances, et jusqu'à 4 fois sans frais pour les
+        forfaits de 15 et 20 séances.
+    - question: Où se déroulent les séances ?
+      reponse: >-
+        À votre domicile, sur Nantes et sa périphérie (dans un rayon de 30 km
+        autour du Leclerc Paridis). Les cours collectifs ont lieu [[lieu]].
+    - question: Qu'est-ce qu'une méthode semi-positive ?
+      reponse: >-
+        Des outils bienveillants, adaptés à chaque chien et à chaque situation,
+        pour une relation durable. [[Précisez votre approche en quelques mots.]]
     - question: Toute la famille peut-elle participer ?
       reponse: >-
-        Oui, c'est même recommandé ! Les enfants sont les bienvenus :
-        l'éducation fonctionne mieux quand tout le monde applique les mêmes
-        règles.
+        Oui, c'est même recommandé : l'éducation fonctionne mieux quand tout le
+        monde applique les mêmes règles.

@@ -1,18 +1,17 @@
-import { ButtonLink } from "@/components/ui/Button";
+import { Phone } from "lucide-react";
+import { ButtonLink, buttonClasses } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { Fill } from "@/components/ui/Todo";
 import { siteConfig } from "@/config/site";
-import { getInfos } from "@/lib/content";
+import { getInfos, telHref } from "@/lib/content";
 
 type CtaBannerProps = {
   /** Remplace le titre défini dans contenu/01-infos-generales.yaml */
   title?: string;
-  /** Affiche le bouton secondaire "Voir les tarifs" */
-  showPricing?: boolean;
 };
 
 /** Bandeau d'appel à l'action commun à toutes les pages. */
-export function CtaBanner({ title, showPricing = true }: CtaBannerProps) {
+export function CtaBanner({ title }: CtaBannerProps) {
   const infos = getInfos();
 
   return (
@@ -32,11 +31,10 @@ export function CtaBanner({ title, showPricing = true }: CtaBannerProps) {
           <ButtonLink href={siteConfig.discoveryHref} variant="accent" arrow>
             {infos.bouton_principal}
           </ButtonLink>
-          {showPricing && (
-            <ButtonLink href="/tarifs" variant="light">
-              Voir les tarifs
-            </ButtonLink>
-          )}
+          <a href={telHref(infos.telephone)} className={buttonClasses("light")}>
+            <Phone className="size-4" aria-hidden />
+            {infos.telephone}
+          </a>
         </div>
       </Reveal>
     </section>

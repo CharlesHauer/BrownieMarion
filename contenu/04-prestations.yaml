@@ -9,58 +9,60 @@
 surtitre: Prestations
 titre: Un accompagnement sur mesure
 intro: >-
-  À domicile ou en extérieur, chaque séance est adaptée à votre chien, à votre
-  rythme et à vos objectifs.
+  À domicile sur Nantes et sa périphérie, ou en groupe : des accompagnements
+  adaptés à votre binôme, pour mieux comprendre et mieux agir.
 
 liste:
-  - titre: Éducation du chiot
-    icone: chien
+  - titre: Bilan comportemental
+    icone: loupe
     resume: >-
-      Poser de bonnes bases dès le plus jeune âge : propreté, socialisation,
-      rappel, morsures de jeu.
-    pour_qui: Chiots de 2 à [[6]] mois et leurs familles
+      Le point de départ de tout accompagnement : une prestation indépendante,
+      réalisée avant l'engagement dans un forfait, pour comprendre votre chien
+      et construire un plan sur mesure.
+    pour_qui: Tous les chiens et leurs familles
     etapes:
-      - Découverte de votre chiot et de votre quotidien
-      - Mise en place des routines (propreté, repos, jeux)
-      - Socialisation progressive et apprentissages de base
+      - Échange sur votre quotidien et vos attentes
+      - Observation de votre chien dans son environnement
+      - Proposition d'un forfait adapté, avec une date de fin fixée dès le départ
     photo:
-    description_photo: Chiot en pleine séance, format paysage
+    description_photo: Marion qui observe un chien avec sa famille, à domicile
 
-  - titre: Cours individuels
+  - titre: Éducation à domicile
     icone: maison
     resume: >-
-      Des séances à domicile ou en extérieur, adaptées à votre chien et à votre
-      quotidien.
-    pour_qui: Tous les chiens, quel que soit leur âge
+      Un accompagnement chez vous, au rythme d'une séance par semaine, pour
+      apprendre dans le respect de votre chien et à son rythme.
+    pour_qui: Chiots et chiens adultes
     etapes:
-      - Bilan de départ et définition des objectifs
-      - Exercices concrets dans votre environnement
-      - Fiche récapitulative et suivi entre les séances
+      - 1 séance théorique, puis de 5 à 20 séances pratiques d'1 heure
+      - 1 séance par semaine, avec une date de fin fixée dès le départ
+      - Des exercices concrets à refaire entre les séances
     photo:
-    description_photo: Marion qui guide un maître et son chien
+    description_photo: Séance d'éducation dans un jardin ou un salon
 
-  - titre: Marche en laisse
-    icone: pattes
-    resume: >-
-      Des balades sereines, sans tirage, grâce à un travail progressif et
-      positif.
-    pour_qui: Chiens qui tirent, réagissent ou s'agitent en balade
-    etapes:
-      - Choix du matériel adapté (harnais, longe…)
-      - Exercices de connexion et de gestion de l'environnement
-      - Mise en pratique en ville ou en nature
-    photo:
-    description_photo: Balade en laisse détendue, en extérieur
-
-  - titre: Troubles du comportement
+  - titre: Comportementalisme
     icone: poignee-de-main
     resume: >-
-      Peurs, réactivité, aboiements, destructions : comprendre l'origine pour
-      accompagner le changement.
+      Peurs, réactivité, aboiements, destructions : mieux comprendre l'origine
+      du comportement pour accompagner le changement avec cohérence.
     pour_qui: Chiens anxieux, réactifs ou en difficulté
     etapes:
-      - Analyse approfondie du comportement et du contexte
+      - Analyse du comportement et de son contexte
       - Plan d'accompagnement personnalisé
-      - Suivi régulier et ajustements
+      - Suivi régulier jusqu'à votre autonomie
     photo:
     description_photo: Moment calme et complice avec un chien
+
+  - titre: Cours collectifs
+    icone: groupe
+    resume: >-
+      Des cours en groupe pour travailler la sociabilité et les apprentissages
+      dans un cadre stimulant. Cours d'1 heure à 25 €, et 10 cours payés = le
+      11e offert !
+    pour_qui: "[[Chiens concernés, ex. : à partir de X mois]]"
+    etapes:
+      - "[[Lieu et jour des cours]]"
+      - Cours d'1 heure, 25 € le cours
+      - 10 cours payés = le 11e offert
+    photo:
+    description_photo: Cours collectif en extérieur

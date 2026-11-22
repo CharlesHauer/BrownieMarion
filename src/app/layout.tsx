@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
-      default: `${infos.nom} – ${infos.metier}`,
+      default: `${infos.nom_du_site} – ${infos.metier}`,
       template: `%s | ${infos.nom_du_site}`,
     },
     description: infos.description_google,
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Aller au contenu
         </a>
-        <Header name={infos.nom} job={infos.metier} contact={contact} />
+        <Header brand={infos.nom_du_site} name={infos.nom} contact={contact} />
         <ViewTransition>
           <main id="contenu" className="flex-1">
             {children}

@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, PawPrint, Search } from "lucide-react";
 import type { Metadata } from "next";
 import { PricingCard } from "@/components/PricingCard";
 import { ButtonLink } from "@/components/ui/Button";
@@ -28,6 +28,42 @@ export default function TarifsPage() {
         intro={page.intro && <Fill text={page.intro} />}
         className="overflow-hidden"
       >
+        {/* Étape 1 : bilan comportemental, prestation indépendante */}
+        {page.bilan && (
+          <Reveal className="mb-12 flex flex-col gap-5 rounded-card bg-white p-6 ring-1 ring-primary-100 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+            <div className="flex items-start gap-4">
+              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent-100 text-accent-600">
+                <Search className="size-6" aria-hidden />
+              </span>
+              <div>
+                <p className="text-xs font-bold tracking-widest text-accent-600 uppercase">
+                  Étape 1
+                </p>
+                <h2 className="mt-1 text-xl sm:text-2xl">{page.bilan.titre}</h2>
+                {page.bilan.texte && (
+                  <p className="mt-1 text-ink-muted">
+                    <Fill text={page.bilan.texte} />
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center justify-between gap-6 sm:justify-end">
+              <p className="font-display text-4xl font-semibold text-primary-900">
+                <Fill text={page.bilan.prix} />
+              </p>
+              <ButtonLink href="/contact" arrow>
+                Réserver
+              </ButtonLink>
+            </div>
+          </Reveal>
+        )}
+
+        {page.forfaits_titre && (
+          <h2 className="mb-2 text-h2">
+            <Fill text={page.forfaits_titre} />
+          </h2>
+        )}
+
         {/* Mobile : carrousel horizontal. Desktop : grille. */}
         <Reveal className="no-scrollbar -mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pt-4 pb-6 sm:-mx-6 sm:scroll-px-6 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 xl:grid-cols-4">
           {page.formules.map((offer) => (
@@ -42,6 +78,32 @@ export default function TarifsPage() {
         <p className="mt-2 text-center text-sm text-ink-muted md:hidden">
           ← Faites défiler pour voir toutes les formules →
         </p>
+
+        {page.cours_collectifs && (
+          <Reveal className="mt-10 flex flex-col items-center gap-5 rounded-card bg-accent-600 px-6 py-8 text-center text-white sm:flex-row sm:justify-between sm:px-10 sm:text-left">
+            <div className="flex flex-col items-center gap-4 sm:flex-row">
+              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-white/15">
+                <PawPrint className="size-7" aria-hidden />
+              </span>
+              <div>
+                <p className="font-display text-2xl">
+                  {page.cours_collectifs.titre} :{" "}
+                  <span className="font-semibold whitespace-nowrap">
+                    <Fill text={page.cours_collectifs.prix} />
+                  </span>
+                </p>
+                {page.cours_collectifs.texte && (
+                  <p className="mt-1 font-script text-2xl font-bold text-accent-50">
+                    <Fill text={page.cours_collectifs.texte} />
+                  </p>
+                )}
+              </div>
+            </div>
+            <ButtonLink href="/contact" variant="light" arrow>
+              S'inscrire
+            </ButtonLink>
+          </Reveal>
+        )}
       </Section>
 
       <Section

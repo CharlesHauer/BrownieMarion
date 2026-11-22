@@ -9,38 +9,43 @@
 #   - Les lignes qui commencent par # sont des commentaires (ignorés)
 
 # --- Identité -------------------------------------------------
-nom: Marion
-metier: Éducatrice canine
-nom_du_site: Marion Éducation Canine
-slogan: Éducation canine bienveillante
+nom_du_site: Du poil de la bête
+nom: Marion Le Roux
+metier: Éducation & comportementalisme canin
+slogan: Éduquer avec bienveillance, accompagner avec cohérence.
 
 # Texte affiché par Google sous le nom du site (150 caractères environ)
 description_google: >-
-  Éducation canine bienveillante : chiots, cours individuels, marche en laisse,
-  comportement. Des méthodes positives pour une relation de confiance avec
-  votre chien.
+  Du poil de la bête – Marion Le Roux, éducation et comportementalisme canin à
+  domicile sur Nantes et sa périphérie. Éduquer avec bienveillance,
+  accompagner avec cohérence.
 
 # --- Coordonnées ----------------------------------------------
+# TODO : remplacer l'adresse email
 email: contact@example.com
-telephone: 06 00 00 00 00
-zone: "[[Ville]] et alentours ([[XX]] km)"
-horaires: "[[Du lundi au samedi, 9h – 19h]]"
+telephone: 07 59 75 10 59
+zone: Nantes et sa périphérie (30 km autour du Leclerc Paridis)
+horaires: "[[Jours et horaires de disponibilité]]"
+
+# Numéro SIRET (affiché en bas de page)
+siret: 824 775 118 00022
 
 # --- Réseaux sociaux ------------------------------------------
 # Collez l'adresse complète de la page. Laissez vide pour masquer le réseau.
 reseaux:
   instagram: https://instagram.com/
   facebook: https://facebook.com/
-  tiktok: https://tiktok.com/
+  tiktok:
 
 # --- Bouton principal -----------------------------------------
 # Le même texte est utilisé sur tous les boutons d'action du site.
-bouton_principal: Réserver une séance découverte
+bouton_principal: Réserver un bilan comportemental
 
 # --- Bandeau de fin de page -----------------------------------
-# Grand encadré foncé en bas des pages Accueil, Prestations, Galerie.
+# Grand encadré vert en bas des pages (avec le bouton principal
+# et un bouton pour appeler).
 bandeau:
-  titre: Et si on commençait par une séance découverte ?
+  titre: Appelez dès aujourd'hui pour réserver votre bilan comportemental
   texte: >-
-    1h30 pour faire connaissance, observer votre chien et définir ensemble un
-    plan adapté. Sans engagement.
+    Le point de départ pour vous donner les clés d'une autonomie durable avec
+    votre chien.

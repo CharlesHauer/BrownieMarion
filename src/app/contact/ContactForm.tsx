@@ -85,7 +85,6 @@ export function ContactForm({ services, confirmation }: ContactFormProps) {
         className="sm:col-span-2"
       >
         <select {...field("service")} className={inputClasses}>
-          <option value="Séance découverte">Séance découverte</option>
           {services.map((s) => (
             <option key={s} value={s}>
               {s}

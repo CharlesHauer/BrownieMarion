@@ -50,6 +50,7 @@ const infosSchema = z.object({
   telephone: text,
   zone: text,
   horaires: optionalText,
+  siret: optionalText,
   reseaux: z.object({
     instagram: optionalText,
     facebook: optionalText,
@@ -64,10 +65,17 @@ const accueilSchema = z.object({
     surtitre: optionalText,
     titre: text,
     texte: text,
-    photo,
+    /** Image à droite du titre (logo ou photo) */
+    image: photo,
     points_forts: z.array(z.object({ icone: icon, texte: text })),
     badge: z.object({ chiffre: text, texte: text }).nullish(),
   }),
+  approche: z
+    .object({
+      titre: text,
+      points: z.array(z.object({ icone: icon, titre: text, texte: text })),
+    })
+    .nullish(),
   presentation: z.object({
     surtitre: optionalText,
     photo_1: photo,
@@ -128,8 +136,17 @@ const tarifsSchema = z.object({
         .nullish()
         .transform((v) => v ?? []),
       mise_en_avant: yesNo,
+      /** Texte de l'étiquette d'une formule mise en avant */
+      etiquette: optionalText,
     }),
   ),
+  bilan: z
+    .object({ titre: text, prix: z.coerce.string(), texte: optionalText })
+    .nullish(),
+  forfaits_titre: optionalText,
+  cours_collectifs: z
+    .object({ titre: text, prix: z.coerce.string(), texte: optionalText })
+    .nullish(),
   infos_pratiques: heading.extend({
     liste: z.array(z.object({ icone: icon, titre: text, texte: text })),
   }),

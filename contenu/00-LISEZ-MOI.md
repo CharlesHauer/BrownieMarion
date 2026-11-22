@@ -65,9 +65,9 @@ texte: Éducatrice canine depuis [[X]] ans
 texte: Éducatrice canine depuis 8 ans
 ```
 
-## Mettre un mot en valeur (grand titre de l'accueil)
+## Mettre un mot en valeur (titres de l'accueil)
 
-Entourez le mot d'étoiles : `Une relation de *confiance* avec votre chien`.
+Entourez le mot d'étoiles : `Éduquer avec *bienveillance*, accompagner avec *cohérence*`. Le mot s'affiche alors en écriture manuscrite orange.
 
 ## Ajouter une photo
 
@@ -103,6 +103,11 @@ Pour les champs `icone:`, utilisez un de ces noms :
 | `lieu` | repère sur une carte |
 | `carte-bancaire` | carte bancaire |
 | `annulation` | flèche de retour |
+| `calendrier` | calendrier coché |
+| `patte` | patte de chien |
+| `drapeau` | drapeau d'arrivée |
+| `diplome` | toque de diplômé |
+| `loupe` | loupe |
 
 ## Mise en avant d'une formule (tarifs)
 

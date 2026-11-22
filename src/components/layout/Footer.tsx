@@ -13,9 +13,12 @@ export function Footer() {
     <footer className="bg-primary-900 text-primary-200">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.2fr]">
         <div>
-          <p className="flex items-center gap-2 font-display text-xl text-white">
-            <PawPrint className="size-5 text-accent-500" aria-hidden />
+          <p className="flex items-center gap-2 font-script text-3xl font-bold text-white">
+            <PawPrint className="size-6 text-accent-500" aria-hidden />
             {infos.nom_du_site}
+          </p>
+          <p className="mt-1 text-sm font-semibold text-primary-100">
+            {infos.nom} · {infos.metier}
           </p>
           <p className="mt-3 max-w-xs text-sm">
             <Fill text={infos.slogan} />
@@ -76,7 +79,10 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <Container className="flex flex-col gap-2 py-5 text-xs text-primary-300 sm:flex-row sm:justify-between">
-          <p>© {infos.nom_du_site} — Prototype</p>
+          <p>
+            © {infos.nom_du_site} — {infos.nom}
+            {infos.siret && <> · SIRET {infos.siret}</>}
+          </p>
           <Link href="/charte" className="hover:text-white">
             Charte graphique
           </Link>

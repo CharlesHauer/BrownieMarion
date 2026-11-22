@@ -3,7 +3,7 @@
  * Le choix titre/texte par thème se fait dans src/styles/theme.css
  * via --font-heading et --font-body.
  */
-import { Fraunces, Nunito, Outfit } from "next/font/google";
+import { Dancing_Script, Fraunces, Nunito, Outfit } from "next/font/google";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -17,6 +17,14 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
+// Écriture manuscrite (nom du site, mots mis en valeur), comme sur le flyer
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing",
+  weight: ["600", "700"],
+  display: "swap",
+});
+
 // Utilisée seulement par le thème "épuré" : pas de préchargement.
 const outfit = Outfit({
   subsets: ["latin"],
@@ -25,6 +33,6 @@ const outfit = Outfit({
   preload: false,
 });
 
-export const fontVariables = [nunito, fraunces, outfit]
+export const fontVariables = [nunito, fraunces, dancing, outfit]
   .map((font) => font.variable)
   .join(" ");

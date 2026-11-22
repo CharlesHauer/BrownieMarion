@@ -6,6 +6,7 @@
 
 /** Thèmes définis dans src/styles/theme.css */
 export const themes = [
+  { id: "poil", label: "Du poil de la bête" },
   { id: "chaleureux", label: "Chaleureux" },
   { id: "foret", label: "Forêt" },
   { id: "epure", label: "Épuré" },
@@ -17,8 +18,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "fr_FR",
 
-  /** Thème actif : "chaleureux" | "foret" | "epure" */
-  theme: "chaleureux" as ThemeId,
+  /** Thème actif : "poil" | "chaleureux" | "foret" | "epure" */
+  theme: "poil" as ThemeId,
 
   nav: [
     { href: "/", label: "Accueil" },
